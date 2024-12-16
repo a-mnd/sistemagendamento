@@ -1,0 +1,463 @@
+dialog {
+    width: 607px;
+    min-height: 463px;
+    border-radius: 30px;
+    background: rgba(38, 46, 93, 0.95);
+    box-shadow: 15px 15px 5px 0px rgba(0, 0, 0, 0.30);
+    border: 0;
+    padding: 15px 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#avisos {
+    z-index: 1000;
+    width: 250px;
+    min-height: 80px;
+    background-color: #262E5D;
+    border-radius: 10px;
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    /* transform: translate(-50%, -80%); */
+    border: 3px solid #E61C62;
+    text-align: center;
+    /* margin: 20px auto 0; */
+    font-family: Poppins;
+    color: #ffff;
+
+    i {
+        display: block;
+    }
+}
+
+.divFlex{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Botão fechar */
+.fechar {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+
+    color: #A18D50;
+    font-size: 22px;
+    border: solid 2px #A18D50;
+    border-radius: 7px;
+    background-color: transparent;
+    cursor: pointer;
+
+    transition: all 150ms;
+}
+
+.fechar:hover {
+    background-color: #A18D50;
+    color: #E61C62;
+    outline: 3px solid #d5b8c255;
+}
+.fechar:active {
+    scale: 0.95;
+}
+
+/* Grupos de inputs (Geral) */
+/*
+.grupo-input = Só um campo
+.infodois = Dois campos por linha
+.infotres = Três campos por linha
+*/
+
+.container-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Código para tranformas em dois inputs por linha */
+.infodois {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);gap: 15px;
+    align-items: center;
+}
+/* Código para tranformas em três inputs por linha */
+.infotres {display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    align-items: center;
+}
+
+/* Estilo geral tanto label e input */
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    label {
+        color: #F2F2F2;
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 12px; /* 75% */
+        letter-spacing: 0.024px;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        height: 40px;
+
+        border-radius: 30px;
+        border: 3px solid #E61C62;
+        background: rgba(217, 217, 217, 0.00);
+        outline: 0;
+
+        color: #fff;
+        padding-inline: 10px;
+
+        transition: all 300ms;
+    }
+}
+
+.grupo-input input:focus, .grupo-input select:focus {
+    outline: solid 3px #e61c636e;
+}
+
+.grupo-input select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+    background: transparent url(../imgs/arrow_down.svg) 95.5% 50% no-repeat;
+
+    option {
+        background: rgba(38, 46, 93, 0.95);
+        box-shadow: 15px 15px 5px 0px rgba(0, 0, 0, 0.30);
+    }
+}
+
+.bottom-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 20px;
+
+    button {
+        min-width: 193px;
+        padding-block: 10px;
+        color: #E61C62;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 18px;
+
+        border-radius: 64px;
+        border: 3px solid #E61C62;
+        background-color: transparent;
+        cursor: pointer;
+
+        transition: all 50ms;
+    }
+
+    button:hover {
+        outline: 3px solid #d5b8c255;
+    }
+
+    button:active {
+        scale: 0.95;
+    }
+}
+
+/* Fim da estilização geral dos modais */
+
+/* ------------------------------------------------------------------- */
+
+/* Modal de agendamento */
+.horario {
+    select {
+        width: 170px;
+        border: 3px solid #A18D50;
+
+        background: #A18D50 url(../imgs/arrow_downEscura.svg) 95.5% 50% no-repeat;
+    }
+}
+
+.data{
+    display: flex;
+    font-family: Poppins;
+}
+.dia{
+    color: #E61C62;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 600;
+}
+.mes{
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    padding-left: 10%;
+
+    input{
+        width: 100%;
+    }
+}
+
+/* Fim da estilização do modal de agendamento */
+
+/* ------------------------------------------------------------------- */
+
+/* Modal do painel do colaborador */
+
+.top-modal {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+
+    .grupo-input {
+        width: 70%;
+        justify-self: center;
+    }
+
+    margin-bottom: 20px;
+}
+
+#container-foto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.quadro-foto {
+    width: 83px;
+    height: 83px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.input-foto-wrapper {
+    label {
+        color: #FFF;
+        font-family: Poppins;
+        font-size: 11px;
+        line-height: 22px; /* 200% */
+    }
+
+    label:hover {
+        cursor: pointer;
+        color: #E61C62;
+    }
+
+    input {
+        display: none;
+    }
+}
+
+.painColab {
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.confirPainel {
+    border: 3px solid #A18D50 !important;
+    color: #A18D50 !important;
+}
+
+/* Fim da estilização do modal do painel do colaborador */
+
+/* ------------------------------------------------------------------- */
+/* Modal Reagendamento */
+.escolha {
+    color: rgba(255, 255, 255, 0.88);
+    font-family: Poppins;
+    font-size: 35px;
+}
+.novodia {
+    width:180px;
+    height:40px;
+    border-radius: 30px;
+    background: #A18D50;
+    padding:10px;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 14px;
+}
+.nome {
+    display:flex;
+    flex-direction:column;
+    font-family: Poppins;
+    color: #F2F2F2;
+}
+.nome label {
+    font-size: 16px;
+    margin-left:19px;
+}
+.nome input {
+    font-size:20px;
+    background:none;
+    border-radius: 30px;
+    padding-left: 10px;
+    border: 3px solid #E61C62;
+    width:500px;
+    height:40px;
+}
+.dois {
+    display:flex;
+    gap: 20px;
+}
+.profissional {
+    display:flex;
+    flex-direction:column;
+    font-family: Poppins;
+    color: #F2F2F2;
+}
+.profissional label {
+    font-size: 16px;
+    margin-left:19px;
+}
+.profissional select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-size:20px;
+    background:none;
+    border-radius: 30px;
+    padding-left: 10px;
+    border: 3px solid #E61C62;
+    width:200px;
+    height:40px;
+}
+.servico {
+    display:flex;
+    flex-direction:column;
+    font-family: Poppins;
+    color: #F2F2F2;
+}
+.servico label {
+    font-size: 16px;
+    margin-left:19px;
+}
+.servico select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-size:20px;
+    background:none;
+    border-radius: 30px;
+    padding-left: 10px;
+    border: 3px solid #E61C62;
+    width:200px;
+    height:40px;
+}
+.telefone {
+    display:flex;
+    flex-direction:column;
+    font-family: Poppins;
+    color: #F2F2F2;
+}
+.telefone label {
+    font-size: 16px;
+    margin-left:19px;
+}
+.telefone input {
+    font-size:20px;
+    background:none;
+    border-radius: 30px;
+    padding-left: 10px;
+    border: 3px solid #E61C62;
+    width:500px;
+    height:40px;
+}
+.horario {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width:180px;
+    height:40px;
+    border-radius: 30px;
+    background: #A18D50;
+    padding:10px;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 14px;
+}
+.confirmar {
+    font-family: Poppins;
+    color:#E61C62;
+    font-size:20px;
+    background:none;
+    border-radius: 30px;
+    padding-left: 10px;
+    border: 3px solid #E61C62;
+    width:500px;
+    height:40px;
+}
+.naocancela {
+    font-family: Poppins;
+    color:#A18D50;
+    font-size:20px;
+    background:none;
+    border-radius: 30px;
+    padding-left: 10px;
+    border: 3px solid #A18D50;
+    width:500px;
+    height:40px;
+    display:flex;
+    justify-content:center;
+    & a{
+        text-decoration: none;
+        color:#A18D50;
+    }
+}
+/* .certeza {
+    font-family: Poppins;
+    color:#f2f2f2;
+} */
+.certeza {
+    font-family: Poppins;
+    color:#f2f2f2;
+    padding-left:100px;
+    
+}
+.escolhas{
+    color: rgba(255, 255, 255, 0.88);
+    font-family: Poppins;
+    font-size: 35px;
+    margin-top:60px;
+    margin-left:50px;
+}
+#ExcluiForm {
+    display:flex;
+    height:300px;
+    gap:20px;
+    justify-content:center;
+    flex-direction:column;
+    align-content:center;
+    padding-left:30px;
+}
+#CancelaForm {
+    display:flex;
+    height:300px;
+    gap:20px;
+    justify-content:center;
+    flex-direction:column;
+    align-content:center;
+    padding-left:30px;
+}
+#alteracaoForm{
+    display:flex;
+    height:300px;
+    gap:20px;
+    justify-content:center;
+    flex-direction:column;
+    align-content:center;
+    padding-left:30px;
+}

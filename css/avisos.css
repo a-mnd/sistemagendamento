@@ -1,0 +1,17 @@
+dialog {
+    width: 250px;
+    height: 80px;
+    background-color: #262E5D;
+    border-radius: 10px;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,50%);
+    border: 3px solid #E61C62; 
+}
+
+dialog p, .avisocep p {
+    text-align: center;
+    margin-top: 20px;
+    font-family: Poppins;
+    color: #ffff;
+}

@@ -1,0 +1,596 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:800,500,400,600,italic|Poppins:500");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(154deg, #A18D50 11.28%, #615B49 43.93%, #515B8B 83.83%);
+    filter: blur(0.5px);
+    font-family: "Playfair Display", serif;
+}
+
+header {
+    width: 100vw;
+    height: 85px;
+    background-color: #262E5D;
+    border-radius: 0px 0px 30px 30px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+nav ul {
+    width: 100%;
+    display: flex;
+}
+
+nav ul li {
+    list-style-type: none;
+    padding: 20px;
+    font-family: Poppins;
+}
+
+nav ul li i {
+    color: #E61C62;
+    font-size: 1.5rem;
+}
+
+.logo {
+    margin: auto;
+    color: #FFFFFF;
+    line-height: 18px;
+    font-size: 2rem;
+
+}
+
+nav ul li a {
+    color: #E61C62;
+    font-size: 1.5rem;
+    text-decoration: none;
+    position: relative;
+    display: flex;
+}
+
+.icones a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.plinks {
+    padding: 5px;
+    font-size: 0.7rem;
+    font-family: Poppins;
+}
+
+nav ul li span.plinks{
+    display: none;
+}
+
+nav ul li:hover span.plinks{
+    display: block;
+    color: #A18D50;
+    position: absolute;
+    top: 20px;
+    transform: scale(1.2);
+}
+
+nav ul li:hover i {
+    color: #A18D50;
+    transform: scale(1.2);
+}
+
+.usuario{
+    display: flex;
+    justify-content: end;
+}
+
+main {
+    margin-top: 27px;
+    margin-bottom: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    margin: auto;
+    width: 100%;
+    max-width: 1065px;
+    height: 524px;
+    padding: 1rem;
+    border-radius: 30px;
+    background: #F2F2F2;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+}
+.cadservico {
+    padding-inline: 30px;
+}
+h1 {
+    font-size: 2rem;
+    font-family: Poppins;
+    color: #303136;
+    padding-bottom: 20px;
+}
+
+.itens {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* faz duas colunas em fração*/
+    gap: 40px;
+}
+/*.servico {
+    padding-top: 10px;
+}*/
+.servico label{
+    display: flex;
+    color: #303136;
+    font-family: Poppins;
+    font-size: 1.2rem;
+    padding: 10px;
+    padding-left: 10px;
+}
+.servico input {
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    border: 1px solid #000;
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+    background: #F2F2F2;
+}
+/*.descricao {
+    padding-top: 10px;
+}*/
+.descricao label {
+    display: flex;
+    color: #303136;
+    font-family: Poppins;
+    font-size: 1.2rem;
+    padding: 10px;
+    padding-left: 10px;
+    /*padding-left: 28px;*/
+}
+.descricao textarea {
+    width: 100%;
+    height: 100px;
+    border-radius: 30px;
+    border: 1px solid #000;
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+    background: #F2F2F2;
+}
+
+.preco label {
+    display: flex;
+    color: #303136;
+    font-family: Poppins;
+    font-size: 1.2rem;
+    /*padding: 10px;*/
+    padding-left: 10px;
+}
+.preco input{
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    border: 1px solid #000;
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+    background: #F2F2F2;
+}
+.botao_servico {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 50px;
+    
+}
+
+.btn_servico {
+    width: 239px;
+    height: 50px;
+    border: 3px solid #E61C62;
+    background: radial-gradient(78.71% 44.73% at 56.05% 55.68%, rgba(230, 28, 98, 0.00) 100%);
+    box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.25);
+    color: #E61C62;
+    font-size: 1rem;
+    border-radius: 30px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.300);
+    cursor: pointer;
+}
+
+.titulo_cargo {
+    font-size: 2rem;
+    font-family: Poppins;
+    color: #303136;
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+
+.cadcargo {
+    padding-inline: 30px;
+}
+
+/*.cargo {
+    padding-top: 10px;
+}*/
+
+.cargo label{
+    display: flex;
+    color: #303136;
+    font-family: Poppins;
+    font-size: 1.2rem;
+    /*padding: 10px;*/
+    padding-left: 10px;
+}
+
+.cargo input {
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    border: 1px solid #000;
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+    background: #F2F2F2;
+}
+
+.botao_cargo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 50px;
+    padding-top: 30px;
+    
+}
+
+.btn_cargo {
+    width: 239px;
+    height: 50px;
+    border: 3px solid #E61C62;
+    background: radial-gradient(78.71% 44.73% at 56.05% 55.68%, rgba(230, 28, 98, 0.00) 100%);
+    box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.25);
+    color: #E61C62;
+    font-size: 1rem;
+    border-radius: 30px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.300);
+    cursor: pointer;
+    
+}
+footer {
+    width: 100vw;
+    height: 85px;
+    background-color: #262E5D;
+    border-radius: 30px 30px 0px 0px;
+    text-align: center;
+}
+
+footer p {
+    padding: 15px;
+    color:  #E61C62;
+    font-family: Poppins;
+}
+
+@media screen and (min-width:300px ) and ( max-width: 425px) {
+
+    body {
+        overflow-y: auto;
+    }
+
+    section {
+        max-width: 300px;
+        height: auto;
+    }
+
+    .cadservico {
+        padding-inline: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        padding-bottom: 10px;
+    }
+    .itens {
+        display: grid;
+        grid-template-columns: 1fr ; /* faz duas colunas em fração*/
+    }
+
+    .servico label {
+        font-size: 1rem;
+        padding: 5px;
+    }
+    .servico input {
+        width: 100%;
+        height: 40px;
+    }
+
+    .descricao label {
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    .descricao textarea {
+        width: 100%;
+        height: 60px;
+        padding: 5px;
+    }
+
+    .preco label {
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    .preco input {
+        width: 100%;
+        height: 40px;
+    }
+
+    .botao_servico{
+        padding-right: 20px;
+        padding-top: 15px;
+    }
+
+    .btn_servico {
+        width: 200px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .cadcargo {
+        padding-inline: 10px;
+    }
+
+    .titulo_cargo {
+        font-size: 1.5rem;
+        padding-bottom: 3px;
+    }
+
+    .cargo label {
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    .cargo input {
+        width: 100%;
+        height: 40px;
+    }
+
+    .botao_cargo {
+        padding-right: 20px;
+        padding-top: 15px;
+    }
+
+    .btn_cargo {
+        width: 200px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    footer {
+        background: none;
+    }
+
+    footer p {
+        -webkit-text-stroke-width: 1;
+        -webkit-text-stroke-color: #303136;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width:426px ) and ( max-width: 768px) {
+
+    section {
+        max-width: 450px;
+        height: auto;
+    }
+
+    .cadservico {
+        padding-inline: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        padding-bottom: 10px;
+    }
+    .itens {
+        display: grid;
+        grid-template-columns: 1fr ; /* faz duas colunas em fração*/
+    }
+
+    .servico label {
+        font-size: 1rem;
+        padding: 5px;
+    }
+    .servico input {
+        width: 100%;
+        height: 40px;
+    }
+
+    .descricao label {
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    .descricao textarea {
+        width: 100%;
+        height: 60px;
+        padding: 5px;
+    }
+
+    .preco label {
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    .preco input {
+        width: 100%;
+        height: 40px;
+    }
+
+    .botao_servico{
+        padding-right: 20px;
+        padding-top: 15px;
+    }
+
+    .btn_servico {
+        width: 200px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .cadcargo {
+        padding-inline: 10px;
+    }
+
+    .titulo_cargo {
+        font-size: 1.5rem;
+        padding-bottom: 3px;
+    }
+
+    .cargo label {
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    .cargo input {
+        width: 100%;
+        height: 40px;
+    }
+
+    .botao_cargo {
+        padding-right: 20px;
+        padding-top: 15px;
+    }
+
+    .btn_cargo {
+        width: 200px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    footer {
+        background: none;
+    }
+
+    footer p {
+        -webkit-text-stroke-width: 1;
+        -webkit-text-stroke-color: #303136;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width:769px ) and ( max-width: 992px) {
+    section {
+        max-width: 600px;
+        height: auto;
+    }
+
+    .cadservico {
+        padding-inline: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        padding-bottom: 5px;
+    }
+    .itens {
+        display: grid;
+        grid-template-columns: 1fr ; /* faz duas colunas em fração*/
+    }
+
+    .servico label {
+        font-size: 1rem;
+        padding: 5px;
+    }
+    .servico input {
+        width: 100%;
+        height: 40px;
+    }
+
+    .descricao label {
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    .descricao textarea {
+        width: 100%;
+        height: 60px;
+        padding: 5px;
+    }
+
+    .preco label {
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    .preco input {
+        width: 100%;
+        height: 40px;
+    }
+
+    .botao_servico{
+        padding-right: 20px;
+        padding-top: 15px;
+    }
+
+    .btn_servico {
+        width: 200px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .cadcargo {
+        padding-inline: 20px;
+    }
+
+    .titulo_cargo {
+        font-size: 1.5rem;
+        padding-bottom: 5px;
+    }
+
+    .cargo label {
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    .cargo input {
+        width: 100%;
+        height: 40px;
+    }
+
+    .botao_cargo {
+        padding-right: 20px;
+        padding-top: 15px;
+    }
+
+    .btn_cargo {
+        width: 200px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width:993px ) and ( max-width: 1024px) {
+
+    section {
+        max-width: 800px;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        padding-bottom: 20px;
+    }
+    .titulo_cargo {
+        font-size: 1.5rem;
+        padding-bottom: 20px;
+    }
+}

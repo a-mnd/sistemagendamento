@@ -1,0 +1,42 @@
+.modalAlert {
+  margin: 0;
+  min-width: 250px;
+  max-width: 300px;
+  min-height: 45px;
+  
+  padding: 10px;
+  position: fixed;
+  right: -350px;
+  top: 15px;
+
+  color: #000;
+  text-align: center;
+  font-weight: 700;
+  font-family: sans-serif;
+  font-size: 16px;
+
+  border-radius: 6px;
+  border: 0;
+  border-bottom: 3px solid #262E5D;
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+
+  pointer-events: none;
+  transition: right 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.modalAlert.show {
+  right: 15px; 
+}
+
+.modalAlert.hide {
+  right: -350px;
+}
+
+@media (max-width: 480px) {
+  .modalAlert {
+      max-width: 200px;
+      font-size: 10px;
+  }
+}

@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+@media screen and (max-width: 992px) {
+    section {
+        max-width: 100%;
+        min-height: 524px;
+        margin-inline: 4%;
+    }
+}
+
+.formulario {
+    width: 100%;
+
+    h1 {
+        color: #303136;
+        text-align: center;
+        font-family: Poppins;
+        /* Utilizei a função clamp para ter uma fonte responsiva a partir do tamanho da tela */
+        font-size: clamp(25px, 4vw, 35px);
+        font-weight: 400;
+    }
+}
+
+.sub_titulo {
+    font-family: Poppins;
+    font-size: 1.5rem;
+    padding: 25px;
+}
+
+.form_conta {
+    padding-left: 20px;
+    }
+    
+    .form_conta label {
+        font-size: 1.2rem;
+        font-family: Poppins;
+        
+    }
+
+.form-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 30px;
+}
+
+#alt_conta{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px 30px;
+}
+
+#alt_senha {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px 30px;
+    max-width: 500px;
+}
+
+
+
+
+.grupo-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    label {
+        color: #303136;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-family: Outfit;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    input {
+        height: 35px;
+        border-radius: 30px;
+        border: 1px solid #000;
+        box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+        padding-inline: 13px;
+
+        color: #000;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-family: Outfit;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    textarea {
+        border-radius: 30px;
+        padding: 10px;
+    }
+}
+
+#input_preco {
+    width: 50%;
+}
+
+#input_confsenha{
+    max-width: 350px;
+}
+
+.inputs-duplos {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 15px;
+}
+
+.inputs-duplos .grupo-inputs {
+    input {
+        width: 92%;
+    }
+}
+
+.grupo-inputs select {
+    height: 35px;
+    border-radius: 30px;
+    border: 1px solid #000;
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+    padding-inline: 13px;
+    color: #000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Outfit;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.grupo-btns {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+
+
+.btn-form {
+    width: 151px;
+    height: 42px;
+
+    border-radius: 64px;
+    background: radial-gradient(78.71% 44.73% at 56.05% 55.68%, rgba(230, 28, 98, 0.00) 100%);
+    box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.25);
+
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
+
+    cursor: pointer;
+}
+
+.btn-form:hover {
+    scale: 1.05;
+}
+
+.btn-form:active {
+    scale: 0.95;
+}
+.enviar {border: 3px solid #515B8B;color: #515B8B;}
+.cancelar {border: 3px solid #E61C62;color: #E61C62;}
+
+.botao {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding-right: 84px;
+    padding-top: 5rem;
+    position: relative;
+}
+    .botaoalterar {
+    width: 283px;
+    height: 66px;
+    border: 3px solid #E61C62;
+    background: radial-gradient(78.71% 44.73% at 56.05% 55.68%, rgba(230, 28, 98, 0.00) 100%);
+    box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.25);
+    color: #E61C62;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 64px;
+    cursor: pointer;
+}
+.botaoVermais {
+    width: 283px;
+    height: 66px;
+    border: 3px solid #E61C62;
+    background: none;
+    color: #E61C62;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 64px;
+    cursor: pointer;
+    position: absolute;
+    left:20px;
+    bottom: 80.5px;
+     & 
+     a{
+       text-decoration: none;
+       color: #E61C62;
+     };
+}
+@media screen and (max-width: 545px) {
+
+    .form-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .grupo-inputs {
+        input {
+            height: 44px;
+        }
+    }
+
+    #input_confsenha{
+        max-width: 100%;
+    }
+
+    #input_preco {
+        width: 100%;
+    }
+
+    .botaoalterar {
+        height: 60px;
+    }
+    .botaoVermais{
+        height: 60px;
+        bottom:10px;
+        left:0;
+    }
+}

@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:800,500,400,600,italic|Poppins:500");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(154deg, #A18D50 11.28%, #615B49 43.93%, #515B8B 83.83%);
+    filter: blur(0.5px);
+    font-family: "Playfair Display", serif;
+}
+
+header {
+    width: 100vw;
+    height: 85px;
+    background-color: #262E5D;
+    border-radius: 0px 0px 30px 30px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+nav ul {
+    width: 100%;
+    display: flex;
+}
+
+nav ul li {
+    list-style-type: none;
+    padding: 20px;
+    font-family: Poppins;
+}
+
+nav ul li i {
+    color: #E61C62;
+    font-size: 1.5rem;
+}
+
+.logo {
+    margin: auto;
+    color: #FFFFFF;
+    line-height: 18px;
+    font-size: 2rem;
+
+}
+
+nav ul li a {
+    color: #E61C62;
+    font-size: 1.5rem;
+    text-decoration: none;
+    position: relative;
+    display: flex;
+}
+
+.icones a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.plinks {
+    padding: 5px;
+    font-size: 0.7rem;
+    font-family: Poppins;
+}
+
+nav ul li span.plinks{
+    display: none;
+}
+
+nav ul li:hover span.plinks{
+    display: block;
+    color: #A18D50;
+    position: absolute;
+    top: 20px;
+    transform: scale(1.2);
+}
+
+nav ul li:hover i {
+    color: #A18D50;
+    transform: scale(1.2);
+}
+
+.usuario{
+    display: flex;
+    justify-content: end;
+}
+
+main {
+    margin-top: 27px;
+    margin-bottom: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    margin: auto;
+    width: 100%;
+    max-width: 1065px;
+    height: 524px;
+    padding: 1rem;
+    border-radius: 30px;
+    background: #F2F2F2;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.titulo {
+    font-size: 2rem;
+    font-family: Poppins;
+    color: #303136;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.sub_titulo {
+    font-family: Poppins;
+    font-size: 1.5rem;
+    padding: 25px;
+}
+
+
+.pai {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.form_conta {
+padding-left: 20px;
+}
+
+.form_conta label {
+    font-size: 1.2rem;
+    font-family: Poppins;
+    padding: 20px;
+}
+
+.input_confirmar {
+    padding: 20px;
+}
+
+.input_confirmar label {
+    display: flex;
+    font-size: 1.2rem;
+    font-family: Poppins;
+    padding: 10px;
+}
+
+.input_confirmar input {
+    width: 40%;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.botao {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding-right: 64px;
+    padding-bottom: 35px;
+}
+    .botaoalterar {
+    width: 283px;
+    height: 60px;
+    border: 3px solid #E61C62;
+    background: radial-gradient(78.71% 44.73% at 56.05% 55.68%, rgba(230, 28, 98, 0.00) 100%);
+    box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.25);
+    color: #E61C62;
+    font-size: 1rem;
+    border-radius: 30px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.300);
+    cursor: pointer;
+}
+
+footer {
+    width: 100vw;
+    height: 85px;
+    background-color: #262E5D;
+    border-radius: 30px 30px 0px 0px;
+    text-align: center;
+}
+
+footer p {
+    padding: 15px;
+    color:  #E61C62;
+    font-family: Poppins;
+}
+
+@media screen and (min-width:300px ) and ( max-width: 425px){
+
+    body {
+        overflow-y: auto;
+    }
+
+    section {
+        max-width: 300px;
+        height: auto;
+    }
+
+    .titulo {
+        font-size: 1.5rem;
+        padding-bottom: 10px;
+    }
+
+    .pai {
+        padding: 10px;
+    }
+
+    .input_confirmar label {
+        display: flex;
+        font-size: 0.9rem;
+        font-family: Poppins;
+        padding: 10px;
+    }
+
+    .input_confirmar input {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .botao {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8rem 0px 0px 0px;
+    }
+
+    .botaoalterar {
+        width: 200px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    footer {
+        background: none;
+    }
+
+    footer p {
+        -webkit-text-stroke-width: 1;
+        -webkit-text-stroke-color: #303136;
+        font-size: 1rem;
+    }
+
+    #menu-desktop {
+        display: none;
+     }
+}
+
+@media screen and (min-width:426px ) and ( max-width: 768px) {
+
+    section {
+        max-width: 450px;
+        height: auto;
+    }
+
+    .titulo {
+        font-size: 1.5rem;
+        padding-bottom: 10px;
+    }
+
+
+    .pai {
+        padding: 20px;
+    }
+
+    .input_confirmar label {
+        display: flex;
+        font-size: 1rem;
+        font-family: Poppins;
+        padding: 10px;
+    }
+
+    .input_confirmar input {
+        width: 90%;
+        padding: 8px;
+    }
+
+    .botao {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8rem 0px 0px 0px;
+    }
+
+    .botaoalterar {
+        width: 200px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    footer {
+        background: none;
+    }
+
+    footer p {
+        -webkit-text-stroke-width: 1;
+        -webkit-text-stroke-color: #303136;
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (min-width:769px ) and ( max-width: 992px) {
+    section {
+        max-width: 600px;
+        height: auto;
+    }
+
+    .input_confirmar input {
+        width: 80%;
+        padding: 8px;
+    }
+
+    .botao{
+        padding-bottom: 15px;
+    }
+
+    .botaoalterar {
+        width: 200px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width:993px ) and ( max-width: 1024px) {
+    section {
+        max-width: 800px;
+        height: auto;
+    }
+
+    .input_confirmar input {
+        width: 60%;
+        padding: 8px;
+    }
+
+    .botao{
+        padding-bottom: 5px;
+    }
+
+    .botaoalterar {
+        width: 250px;
+        height: 50px;
+        font-size: 1rem;
+    }
+}

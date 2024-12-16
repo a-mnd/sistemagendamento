@@ -1,0 +1,723 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:800,500,400,600,italic|Poppins:500");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(
+    154deg,
+    #a18d50 11.28%,
+    #615b49 43.93%,
+    #515b8b 83.83%
+  );
+  filter: blur(0.5px);
+  font-family: "Playfair Display", serif;
+}
+
+header {
+  width: 100vw;
+  height: 85px;
+  background-color: #262e5d;
+  border-radius: 0px 0px 30px 30px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+nav ul {
+  width: 100%;
+  display: flex;
+}
+
+nav ul li {
+  list-style-type: none;
+  padding: 20px;
+  font-family: Poppins;
+}
+
+nav ul li i {
+  color: #e61c62;
+  font-size: 1.5rem;
+}
+
+.logo {
+  margin: auto;
+  color: #ffffff;
+  line-height: 18px;
+  font-size: 2rem;
+}
+
+nav ul li a {
+  color: #e61c62;
+  font-size: 1.5rem;
+  text-decoration: none;
+  position: relative;
+  display: flex;
+}
+
+.icones a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.plinks {
+  padding: 5px;
+  font-size: 0.7rem;
+  font-family: Poppins;
+}
+
+nav ul li span.plinks {
+  display: none;
+}
+
+nav ul li:hover span.plinks {
+  display: block;
+  color: #a18d50;
+  position: absolute;
+  top: 20px;
+  transform: scale(1.2);
+}
+
+nav ul li:hover i {
+  color: #a18d50;
+  transform: scale(1.2);
+}
+
+.usuario {
+  display: flex;
+  justify-content: end;
+}
+
+main {
+  margin-top: 27px;
+  margin-bottom: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  margin: auto;
+  width: 100%;
+  max-width: 1065px;
+  height: 524px;
+  padding: 1rem;
+  border-radius: 30px;
+  background: rgba(254, 253, 253, 0.5);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  justify-content: center;
+  align-items: center;
+}
+.recagen {
+  width: 323px;
+  height: 127px;
+  border-radius: 30px;
+  background: #515b8b;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  position: relative;
+  bottom: 10vw;
+  left: 12vw;
+  padding: 22px;
+}
+.recagen p {
+  width: 40.7px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Playfair Display";
+  color: #a18d50;
+  height: 41px;
+}
+.recagen h3 {
+  width: 434px;
+  position: relative;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: Poppins;
+  color: #18191a;
+  top: 3vw;
+  right: 2.5vw;
+  height: 45.3px;
+  text-wrap: nowrap;
+}
+.observacoes {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  background-color: #fff;
+  height: 137px;
+  width: 550px;
+  display: flex;
+  padding: 22px;
+  position: relative;
+  top: 10vw;
+  right: 13vw;
+}
+.observacoes h3 {
+  text-wrap: nowrap;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: Poppins;
+  color: #a18d50;
+  height: 49.3px;
+}
+.observacoes .obs {
+  font-family: Poppins;
+  color: #303136;
+  text-wrap: nowrap;
+  position: relative;
+  top: 3vw;
+  right: 10vw;
+}
+/* .calendario {
+  border-radius: 30px;
+  background-color: rgba(217, 217, 217, 0);
+  border: 0.5px solid #303136;
+  height: 312px;
+  width: 378px;
+  position: relative;
+  bottom: 2.5vw;
+  right: 11vw;
+}
+#mesAno {
+  width: 378px;
+  font-size: 20px;
+  letter-spacing: 0.03em;
+  font-weight: 500;
+  font-family: Poppins;
+  color: #303136;
+  height: 22px;
+  padding: 1.5vw;
+  display: inline-block;
+}
+.datatabela {
+  width: 378px;
+  margin-top: 1.5vw;
+}
+.calendario th {
+  width: 30px;
+  font-family: Poppins;
+  color: #a18d50;
+  height: 30px;
+  font-size: 20px;
+}
+.calendario td {
+  width: 30px;
+  font-size: 18px;
+  font-family: Poppins;
+  color: #615b49;
+  height: 30px;
+  padding: 0.8vw 1vw 0 1vw;
+} */
+.containerCalendario {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+    "c l"
+    "c l"
+    "e e";
+  gap: 10px 20px;
+  padding-inline: 30px;
+}
+
+.calendario {
+  border-radius: 30px;
+  background-color: rgba(217, 217, 217, 0);
+  border: 0.5px solid #303136;
+  height: 300px;
+  width: 378px;
+
+  grid-area: c;
+}
+
+.datatabela {
+  width: 378px;
+  margin-top: 1.5vw;
+}
+
+.calendario th {
+  width: 30px;
+  font-family: Poppins;
+  color: #a18d50;
+  height: 30px;
+  font-size: 20px;
+}
+
+.calendario td {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-size: 18px;
+  font-family: Poppins;
+  color: #615b49;
+  padding: 5px;
+
+  border-radius: 20%;
+
+  transition: all 150px;
+}
+.calendario .hoje {
+  /* border-radius: 50%; */
+  background: #e61c62;
+  mix-blend-mode: darken;
+  padding: 1vw;
+}
+#mesAno {
+  width: 378px;
+  font-size: 20px;
+  letter-spacing: 0.03em;
+  font-weight: 500;
+  font-family: Poppins;
+  color: #303136;
+  height: 22px;
+  padding: 1.5vw;
+  display: inline-block;
+}
+footer {
+  width: 100vw;
+  height: 85px;
+  background-color: #262e5d;
+  border-radius: 30px 30px 0px 0px;
+  text-align: center;
+}
+
+footer p {
+  padding: 15px;
+  color: #e61c62;
+  font-family: Poppins;
+}
+
+/* Responsividade para telas menores que 425px */
+/* @media screen and (max-width: 425px) {
+  body {
+    overflow-y: auto;
+  }
+  section {
+    max-width: 365px;
+    height: auto;
+  }
+  footer {
+    background: none;
+  }
+  footer p {
+    -webkit-text-stroke-width: 1;
+    -webkit-text-stroke-color: #303136;
+    font-size: 1rem;
+  }
+  .recagen {
+    width: 300px;
+    height: 50px;
+    bottom: 50vw;
+    left: 90vw; 
+    padding: 7px;
+  }
+  .recagen p {
+    width: 20px;
+    font-size: 15px;
+    height: 20px;
+  }
+  .recagen h3 {
+    width: 200px;
+    font-size: 12px;
+    top: 5vw;
+    right: 2.5vw;
+    height: 45.3px;
+  }
+  .observacoes {
+    height: 120px;
+    width: 450px;
+    padding: 10px;
+    top: 0;
+    right: 0;
+    bottom: 50vw;
+    left:10vw;
+  }
+  .observacoes h3 {
+    font-size: 18px;
+    height: 45px;
+  }
+  .observacoes .obs {
+    text-wrap: nowrap;
+    top: 3vw;
+    right: 10vw;
+  }
+  .containerCalendario {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+}
+  
+}  */
+/* Responsividade para telas entre 426px e 768px */
+/* @media screen and (min-width: 426px) and (max-width: 768px) {
+  section {
+    max-width: 600px;
+    height: auto;
+  }
+  .containerCalendario {
+    grid-template-areas: "c c"
+                         "c c"
+                         "l e";
+    gap: 30px;
+    align-items: center;
+}
+.recagen {
+  width: 300px;
+  height: 50px;
+  bottom: 50vw;
+  left: 90vw; 
+  padding: 7px;
+}
+.recagen p {
+  width: 20px;
+  font-size: 15px;
+  height: 20px;
+}
+.recagen h3 {
+  width: 200px;
+  font-size: 12px;
+  top: 5vw;
+  right: 2.5vw;
+  height: 45.3px;
+}
+.observacoes {
+  height: 120px;
+  width: 450px;
+  padding: 10px;
+  top: 0;
+  right: 0;
+  bottom: 50vw;
+  left:10vw;
+}
+.observacoes h3 {
+  font-size: 18px;
+  height: 45px;
+}
+.observacoes .obs {
+  text-wrap: nowrap;
+  top: 3vw;
+  right: 10vw;
+}
+  footer {
+    background: none;
+  }
+  footer p {
+    -webkit-text-stroke-width: 1;
+    -webkit-text-stroke-color: #303136;
+    font-size: 1rem;
+  }
+}  */
+/*Responsividade para telas maiores que 1280px */
+/* @media screen and (min-width: 1280px) {
+  body {
+    overflow-y: auto;
+  }
+  section {
+    max-width: 1200px;
+    height: auto;
+  }
+  .recagen {
+    width: 300px;
+    height: 50px;
+    bottom: 50vw;
+    left: 90vw; 
+    padding: 7px;
+  }
+  .recagen p {
+    width: 20px;
+    font-size: 15px;
+    height: 20px;
+  }
+  .recagen h3 {
+    width: 200px;
+    font-size: 12px;
+    top: 5vw;
+    right: 2.5vw;
+    height: 45.3px;
+  }
+  .observacoes {
+    height: 120px;
+    width: 450px;
+    padding: 10px;
+    top: 0;
+    right: 0;
+    bottom: 50vw;
+    left:10vw;
+  }
+  .observacoes h3 {
+    font-size: 18px;
+    height: 45px;
+  }
+  .observacoes .obs {
+    text-wrap: nowrap;
+    top: 3vw;
+    right: 10vw;
+  }
+  footer {
+    background: none;
+  }
+  footer p {
+    -webkit-text-stroke-width: 1;
+    -webkit-text-stroke-color: #303136;
+    font-size: 1rem;
+  }
+}  */
+
+@media screen and (max-width: 425px) {
+  body {
+    overflow-y: auto;
+  }
+  section {
+    max-width: 365px;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+  }
+  .recagen {
+    width: 300px;
+    position: relative;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    padding: 7px;
+  }
+  .recagen p {
+    width: 20px;
+    font-size: 15px;
+    height: 20px;
+  }
+  .recagen h3 {
+    width: 200px;
+    font-size: 12px;
+    top: 5vw;
+    right: 2.5vw;
+    height: 45.3px;
+  }
+  .observacoes {
+    height: auto;
+    width: 100%;
+    padding: 10px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .observacoes h3 {
+    font-size: 12px;
+    height: auto;
+  }
+  .observacoes .obs {
+    text-wrap: nowrap;
+    font-size: 12px;
+    top: 3vw;
+    right: 0;
+  }
+  .containerCalendario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .calendario {
+    width: 100%;
+  }
+  .datatabela {
+    width: 100%;
+  }
+  #mesAno {
+    width: 100%;
+  }
+  footer {
+    background: none;
+  }
+
+  footer p {
+    -webkit-text-stroke-width: 1;
+    -webkit-text-stroke-color: #303136;
+    font-size: 1rem;
+  }
+}
+
+/* Responsividade para telas entre 426px e 992px */
+@media screen and (min-width: 426px) and (max-width: 992px) {
+  section {
+    max-width: 600px;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+  }
+  .containerCalendario {
+    grid-template-areas: "c c" "c c" "l e";
+    gap: 30px;
+    align-items: center;
+  }
+  .recagen {
+    width: 300px;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    padding: 7px;
+  }
+  .recagen p {
+    width: 20px;
+    font-size: 15px;
+    height: 20px;
+  }
+  .recagen h3 {
+    width: 200px;
+    font-size: 12px;
+    top: 20px;
+    right: 2vw;
+    height: 45.3px;
+  }
+  .observacoes {
+    height: auto;
+    width: 100%;
+    padding: 10px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .observacoes h3 {
+    font-size: 12px;
+    height: auto;
+  }
+  .observacoes .obs {
+    text-wrap: nowrap;
+    font-size: 12px;
+    top: 3vw;
+    right: 0;
+  }
+  .calendario {
+    width: 100%;
+  }
+  .datatabela {
+    width: 100%;
+  }
+  #mesAno {
+    width: 100%;
+  }
+  footer {
+    background: none;
+  }
+
+  footer p {
+    -webkit-text-stroke-width: 1;
+    -webkit-text-stroke-color: #303136;
+    font-size: 1rem;
+  }
+}
+/* Responsividade para telas entre 993px e 1024px */
+@media screen and (min-width: 993px) and (max-width: 1024px) {
+
+  section {
+    max-width: 920px;
+    height: auto;
+    gap:20px;
+  }
+
+  .containerCalendario {
+    grid-template-areas: "c c" "c c" "l e";
+    gap: 30px;
+    align-items: center;
+  }
+  .calendario {
+    max-width: 370px;
+    height: auto;
+    margin-bottom: 20px;
+    margin-right: 90px;
+  }
+  .datatabela {
+    width: 100%;
+    max-width: 378px;
+  }
+  #mesAno {
+    width: 100%;
+    max-width: 378px;
+  }
+}
+
+/* Responsividade para telas entre 1024px e 1280px */
+@media screen and (min-width: 1025px)  and (max-width: 1280px) {
+  /* body { overflow-y: auto; }  */
+  /* section {
+    max-width: 1200px;
+    height: auto;
+    display: flex;
+    /* flex-direction: column; */
+    /* align-items: center;
+    padding: 20px;
+  }
+  .recagen {
+    width: 323px;
+    height: 127px;
+    bottom: 0;
+    left: 0;
+    padding: 22px;
+    margin-bottom: 20px;
+  }
+  .recagen p {
+    width: auto;
+    font-size: 18px;
+    height: auto;
+  }
+  .recagen h3 {
+    width: auto;
+    font-size: 16px;
+    top: 0;
+    right: 0;
+    height: auto;
+  }
+  .observacoes {
+    height: auto;
+    width: 100%;
+    max-width: 550px;
+    padding: 22px;
+    top: 0;
+    right: 0;
+    margin-bottom: 20px;
+  }
+  .observacoes h3 {
+    font-size: 20px;
+    height: auto;
+  }
+  .observacoes .obs {
+    text-wrap: nowrap;
+    top: 0;
+    right: 0;
+  }*/
+  .containerCalendario {
+    grid-template-areas: "c c" "c c" "l e";
+    gap: 30px;
+    align-items: center;
+  }
+  .calendario {
+    max-width: 378px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .datatabela {
+    width: 100%;
+    max-width: 378px;
+  }
+  #mesAno {
+    width: 100%;
+    max-width: 378px;
+  }
+}
